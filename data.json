@@ -1,0 +1,38 @@
+{
+  "tournament": {
+    "name": "PYROCORE LEAGUE S1",
+    "tagline": "BRING THE HEAT",
+    "game": "FREE FIRE",
+    "year": "2025",
+    "server": "LATAM",
+    "platform": "Solo móvil",
+    "teams": 0,
+    "groups": 0,
+    "prizePool": "TBD",
+    "intro": "PYROCORE LEAGUE Season 1 — El torneo que pone a prueba a los mejores equipos de Free Fire LATAM. Solo los más agresivos, disciplinados y estratégicos llegarán al tope.",
+    "heroImage": "assets/hero.webp",
+    "state": "abierto",
+    "teamsPerGroup": 12,
+    "notice": "",
+    "rulesText": "Nivel mínimo: Todos los jugadores pertenecientes a la región norte deben de tener un nivel de cuenta +40, para jugadores de otras regiones no aplica.\nEquipos incompletos: La organización no se hace responsable de jugadores que no ingresen a la sala ni por fallas de conexión.\nSistema de comunicación: Se utilizará Discord desde la primera fase, de no ingresar tendrán una sanción en la puntuación.\nTag o iniciales: Los equipos deben de tener un mínimo de jugadores 3/4 con tag en fases y para la final 4/4, de lo contrario habrá sanción en la puntuación.\nJugadores FFWS: Equipo con jugador de liga sin registrar desde fase de octavos se le descontarán los puntos del jugador.\nRevisiones: Mantener activas las grabaciones de juego, en caso de solicitarse revisión, si el jugador demora o se niega a esta será descalificación del equipo y serán vetados de futuros o eventos enlazados.",
+    "clarificationsText": "Respetar casillas asignadas.\nTorneo solo móvil.\n3/4 tag obligatorio en fases, 4/4 final.\nSe permite 1 FFWS con registro desde 8vos.\nVálido lista de eliminación.\nDiscord obligatorio.",
+    "prohibitedText": "Hacks o bugs.\nEmuladores.\nFaltas de respeto.",
+    "rulesNote": "Jugador FFWS no registrado no tendrá derecho a jugar en las demás fases."
+  },
+  "links": {
+    "instagram": "https://www.instagram.com/pyrocore_league/",
+    "instagramHandle": "@pyrocore_league",
+    "infoGroup": "",
+    "infoGroupLabel": "Grupo de información",
+    "discord": "",
+    "registration": ""
+  },
+  "prizes": [
+    { "place": "1° Lugar", "amount": "TBD" },
+    { "place": "2° Lugar", "amount": "TBD" },
+    { "place": "3° Lugar", "amount": "TBD" }
+  ],
+  "schedule": [],
+  "results": [],
+  "sponsors": []
+}
