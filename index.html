@@ -7,18 +7,23 @@
   <meta name="description" content="PYROCORE LEAGUE Season 1 — Torneo de Free Fire LATAM, solo móvil. Bring the heat.">
   <meta property="og:title" content="PYROCORE LEAGUE S1 · Free Fire LATAM">
   <meta property="og:description" content="Free Fire LATAM · Solo móvil · Bring the heat.">
-  <meta property="og:image" content="assets/hero.webp">
+  <meta property="og:image" content="assets/hero.png">
   <link rel="icon" href="assets/favicon.png">
-  <meta name="theme-color" content="#030601">
+  <meta name="theme-color" content="#010401">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=1.0.0">
+  <link rel="stylesheet" href="assets/styles.css?v=2.0.0">
 </head>
 <body>
+
+  <!-- ── Navigation ───────────────────────────────────────────── -->
   <header class="topbar">
     <div class="container">
-      <a class="brand" href="#inicio"><img src="assets/logo.webp" alt="" width="30" height="37"><span>PYROCORE <b>LEAGUE</b> S1</span></a>
+      <a class="brand" href="#inicio">
+        <img src="assets/logo.png" alt="" width="30" height="37">
+        <span>PYROCORE <b>LEAGUE</b> S1</span>
+      </a>
       <button class="nav-toggle" aria-label="Menú" aria-expanded="false">☰</button>
       <nav class="nav">
         <a href="#info">Info</a>
@@ -32,31 +37,49 @@
   </header>
 
   <main>
+
+    <!-- ── Hero — art bleeds right, copy anchored left ────────── -->
     <section class="hero" id="inicio">
-      <div class="container">
-        <div>
-          <div class="hero-tags"><span><b data-k="game">FREE FIRE</b></span><span>PYROCORE <i>|</i> <b data-k="year">2025</b></span></div>
+
+      <!-- Art: absolute, right-edge bleed -->
+      <div class="hero-art" aria-hidden="true">
+        <img id="hero-img" src="assets/hero.png" alt="PYROCORE LEAGUE S1" width="1071" height="1143">
+        <span class="side-label">PYROCORE LEAGUE SEASON 1</span>
+      </div>
+
+      <!-- Copy -->
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <div class="hero-tags">
+            <span><b data-k="game">FREE FIRE</b></span>
+            <span>PYROCORE <i>|</i> <b data-k="year">2025</b></span>
+          </div>
           <span class="kicker" id="state-badge">Inscripciones abiertas</span>
           <h1 class="title-silver" data-k="name">PYROCORE LEAGUE S1</h1>
-          <div class="title-silver prize-label">PRIZE POOL</div>
-          <div class="title-teal prize" data-k="prizePool">TBD</div>
+          <div class="hero-prize">
+            <div class="title-silver prize-label">PRIZE POOL</div>
+            <div class="title-teal prize" data-k="prizePool">TBD</div>
+          </div>
           <p class="lead">La primera temporada del torneo que pone a prueba a los mejores equipos de Free Fire LATAM. Solo los más agresivos llegarán al top.</p>
           <div class="cta-row" id="hero-cta"></div>
         </div>
-        <div class="hero-art">
-          <img id="hero-img" src="assets/hero.webp" alt="PYROCORE LEAGUE S1" width="1071" height="1143">
-          <span class="side-label">PYROCORE LEAGUE SEASON 1</span>
-        </div>
       </div>
+
+      <!-- Stats row -->
       <div class="container">
         <div class="stats" id="stats"></div>
       </div>
+
     </section>
 
+    <!-- ── Info del torneo ───────────────────────────────────── -->
     <section class="block" id="info">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">El torneo</span><h2>PYROCORE LEAGUE S1 <em>abre sus puertas</em></h2></div>
+          <div>
+            <span class="eyebrow">El torneo</span>
+            <h2>PYROCORE LEAGUE S1 <em>abre sus puertas</em></h2>
+          </div>
         </div>
         <div class="info-grid">
           <div class="panel corner info-text reveal">
@@ -67,22 +90,31 @@
           <div class="panel prizes reveal">
             <h3>Premiación</h3>
             <div id="prizes"></div>
-            <div class="prize-total"><span class="eyebrow" style="margin:0">Prize pool</span><b class="title-teal" data-k="prizePool">TBD</b></div>
+            <div class="prize-total">
+              <span class="eyebrow" style="margin:0">Prize pool</span>
+              <b class="title-teal" data-k="prizePool">TBD</b>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ── Calendario ────────────────────────────────────────── -->
     <section class="block" id="calendario">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Fechas</span><h2>Calendario</h2></div>
+          <div>
+            <span class="eyebrow">Fechas</span>
+            <h2>Calendario</h2>
+          </div>
         </div>
         <div class="sched-tools">
           <div class="tabs" id="sched-phases" style="margin:0"></div>
           <label class="team-search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input type="search" id="team-search" placeholder="Busca tu equipo…" aria-label="Buscar equipo en el cronograma" autocomplete="off">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+            </svg>
+            <input type="search" id="team-search" placeholder="Busca tu equipo…" aria-label="Buscar equipo" autocomplete="off">
           </label>
         </div>
         <div id="schedule"></div>
@@ -90,10 +122,14 @@
       </div>
     </section>
 
+    <!-- ── Resultados ────────────────────────────────────────── -->
     <section class="block" id="resultados">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Tabla de posiciones</span><h2>Resultados</h2></div>
+          <div>
+            <span class="eyebrow">Tabla de posiciones</span>
+            <h2>Resultados</h2>
+          </div>
         </div>
         <div class="tabs phase-tabs" id="phase-tabs"></div>
         <div class="tabs" id="result-tabs" role="tablist"></div>
@@ -101,27 +137,37 @@
       </div>
     </section>
 
+    <!-- ── Comunidad ─────────────────────────────────────────── -->
     <section class="block" id="comunidad">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Mantente informado</span><h2>Comunidad</h2></div>
+          <div>
+            <span class="eyebrow">Mantente informado</span>
+            <h2>Comunidad</h2>
+          </div>
         </div>
         <div class="community" id="community"></div>
       </div>
     </section>
 
+    <!-- ── Sponsors ──────────────────────────────────────────── -->
     <section class="block" id="sponsors">
       <div class="container">
         <div class="section-head reveal">
-          <div><span class="eyebrow">Gracias a</span><h2>Sponsors</h2></div>
+          <div>
+            <span class="eyebrow">Gracias a</span>
+            <h2>Sponsors</h2>
+          </div>
         </div>
         <div class="panel sponsors" aria-label="Sponsors de PYROCORE LEAGUE S1">
           <div class="sp-track" id="sp-track"></div>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- ── Footer ────────────────────────────────────────────────── -->
   <footer>
     <div class="container">
       <div class="hashtags">#GO<b>PYRO</b> &nbsp; #SOMOS<b>PYROCORE</b></div>
@@ -129,32 +175,41 @@
       <div>© <span data-k="year">2025</span> PYROCORE LEAGUE · <span data-k="tagline">Bring the heat</span></div>
     </div>
     <div class="container credit">
-      <a href="https://www.instagram.com/coach.nikoh/" target="_blank" rel="noopener" aria-label="Página creada por coach.nikoh en Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      <a href="https://www.instagram.com/coach.nikoh/" target="_blank" rel="noopener" aria-label="Página creada por coach.nikoh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
         <span>Página creada por <b>@coach.nikoh</b></span>
       </a>
     </div>
   </footer>
 
+  <!-- ── Reglamento modal ──────────────────────────────────────── -->
   <dialog class="rules-dialog" id="rules-dialog" aria-labelledby="rules-title">
     <div class="rules-sheet">
       <header class="rules-head">
-        <div><span class="eyebrow">PYROCORE League S1</span><h2 id="rules-title">Reglamento</h2></div>
+        <div>
+          <span class="eyebrow">PYROCORE League S1</span>
+          <h2 id="rules-title">Reglamento</h2>
+        </div>
         <button class="rules-close" type="button" aria-label="Cerrar reglamento" data-close-rules>✕</button>
       </header>
       <div class="rules-body" id="rules-body"></div>
       <footer class="rules-foot">
-        <a class="btn ghost sm" href="assets/reglamento.webp" target="_blank" rel="noopener">Ver póster original</a>
+        <a class="btn ghost sm" href="assets/reglamento.png" target="_blank" rel="noopener">Ver póster original</a>
         <button class="btn sm" type="button" data-close-rules>Entendido</button>
       </footer>
     </div>
   </dialog>
 
+  <!-- ── Scripts ───────────────────────────────────────────────── -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="assets/config.js?v=1.0.0"></script>
-  <script src="assets/common.js?v=1.0.0"></script>
-  <script src="assets/download.js?v=1.0.0"></script>
-  <script src="assets/app.js?v=1.0.0"></script>
-  <script src="assets/fx.js?v=1.0.0" defer></script>
+  <script src="assets/config.js?v=2.0.0"></script>
+  <script src="assets/common.js?v=2.0.0"></script>
+  <script src="assets/download.js?v=2.0.0"></script>
+  <script src="assets/app.js?v=2.0.0"></script>
+  <script src="assets/fx.js?v=2.0.0" defer></script>
 </body>
 </html>
